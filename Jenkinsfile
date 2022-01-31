@@ -14,6 +14,7 @@ pipeline {
         text(name:'Email', defaultValue:'''ejemplo@ejemplo.com''')
     }
     stages {
+
         stage('Init'){
             steps{
                  sh "npm ci && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y"
@@ -22,6 +23,7 @@ pipeline {
             }
 
         }
+
         stage('Linter'){
             steps{
                 script {
@@ -30,6 +32,7 @@ pipeline {
             }
 
         }
+
         stage('Test'){
             steps{
                 script {
@@ -38,6 +41,7 @@ pipeline {
                 }
             }
         }
+
         stage('Update_Readme') {
              steps {
                script{
@@ -54,14 +58,14 @@ pipeline {
                 script{
                             sh """
                               #/bin/bash
-                              node jenkinsScripts/email.js ${params.Email} ${test}
+                              node jenkinsScripts/email.js ${params.Email} ${LINT} ${test}
                               
                               """
                }
             
         }
        
-    } 
+         } 
   
 }
 }
