@@ -69,3 +69,8 @@ pipeline {
   
 }
 }
+
+/* 
+npm install
+
+ */
