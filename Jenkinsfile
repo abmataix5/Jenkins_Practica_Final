@@ -54,7 +54,7 @@ pipeline {
                 script{
                             sh """
                               #/bin/bash
-                              node jenkinsScripts/email.js ${params.Email} 
+                              node jenkinsScripts/email.js ${params.Email} ${test}
                               
                               """
                }
