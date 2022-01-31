@@ -41,7 +41,7 @@ pipeline {
         stage('Update_Readme') {
              steps {
                script{
-                    sh(script: "./jenkinsCripts/Push_Changes.sh",returnStatus:true)
+                    sh(script: "./jenkinsScripts/Push_Changes.sh",returnStatus:true)
 
                  /*            sh('git config user.name abmataix5')
                             sh('git config user.email mataix.ab@gmail.com')
