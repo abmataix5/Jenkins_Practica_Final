@@ -4,6 +4,10 @@ pipeline {
     triggers { 
         pollSCM('0 */3 * * *') 
     }
+      environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
       parameters {
         text(name:'Nombre', defaultValue:'''Nombre de la persona''')
         text(name:'Motivo', defaultValue:'''Motivo de ejecución''')
@@ -30,7 +34,7 @@ pipeline {
             steps{
                 script {
                     TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true)
-                    echo "${TEST}"
+                    echo "${DB_ENGINE}"
                 }
             }
         }
