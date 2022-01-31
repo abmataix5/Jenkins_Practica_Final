@@ -49,23 +49,18 @@ pipeline {
             }
         }
 
-        stage('Enviar_notificacion') {
+     /*    stage('Enviar_notificacion') {
              steps {
-              
-              
-
                 script{
                             sh """
                               #/bin/bash
                               node jenkinsScripts/email.js ${params.Email} 
                               
                               """
-
                }
-       
             
         }
        
-    }
+    } */
   
 }
