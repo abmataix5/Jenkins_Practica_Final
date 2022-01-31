@@ -51,7 +51,7 @@ pipeline {
 
         stage('Enviar_notificacion') {
              steps {
-               script{
+              
               
 
                 script{
@@ -63,7 +63,7 @@ pipeline {
 
                }
        
-            }
+            
         }
        
     }
