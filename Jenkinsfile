@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Init'){
             steps{
-                 sh "npm ci && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y"
+                sh "npm ci && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y"
                 sh 'npm run build'
                 sh 'npm start &'
             }
@@ -31,6 +31,17 @@ pipeline {
             steps{
                 script {
                     env.TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true)
+
+                    echo "$TEST"
+                }
+            }
+        }
+
+             stage('Test2'){
+            steps{
+                script {
+               
+                    
                     echo "$TEST"
                 }
             }
