@@ -5,8 +5,8 @@ pipeline {
         pollSCM('0 */3 * * *') 
     }
       environment {
-        LINT = 'true'
-        TEST    = 'sqlite'
+        LINT = ''
+        TEST    = ''
     }
       parameters {
         text(name:'Nombre', defaultValue:'''Nombre de la persona''')
@@ -33,7 +33,7 @@ pipeline {
         stage('Test'){
             steps{
                 script {
-                    TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true)
+                    TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true).trim()
                     echo "${TEST}"
                 }
             }
