@@ -5,8 +5,8 @@ pipeline {
         pollSCM('0 */3 * * *') 
     }
       environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
+        LINT = 'true'
+        TEST    = 'sqlite'
     }
       parameters {
         text(name:'Nombre', defaultValue:'''Nombre de la persona''')
@@ -34,7 +34,7 @@ pipeline {
             steps{
                 script {
                     TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true)
-                    echo "${DB_ENGINE}"
+                    echo "${TEST}"
                 }
             }
         }
