@@ -1,8 +1,9 @@
 const fs = require('fs')
-const core = require('@actions/core')
+/* const core = require('@actions/core') */
 
 
 const testResult = process.argv[2]
+console.log(testResult);
 const successBadge = 'https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg'
 const failedBadge = 'https://img.shields.io/badge/test-failure-red.svg'
 
