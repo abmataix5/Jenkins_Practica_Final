@@ -21,7 +21,7 @@ pipeline {
         stage('Linter'){
             steps{
                 script {
-                    env.LINT = sh(script: "npm run lint",returnStatus:true)
+                    LINT = sh(script: "npm run lint",returnStatus:true)
                 }
             }
 
@@ -29,7 +29,7 @@ pipeline {
         stage('Test'){
             steps{
                 script {
-                    env.TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true)
+                    TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true)
                     echo "${TEST}"
                 }
             }
