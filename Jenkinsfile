@@ -43,12 +43,24 @@ pipeline {
                script{
                     sh(script: "./jenkinsScripts/Push_Changes.sh",returnStatus:true)
 
-                 /*            sh('git config user.name abmataix5')
-                            sh('git config user.email mataix.ab@gmail.com')
-                            sh('git add .')
-                            sh('git commit --allow-empty -m "Acutlizar readme"')
-                            sh('git push')
- */
+     
+               }
+       
+            }
+        }
+
+        stage('Enviar_notificacion') {
+             steps {
+               script{
+              
+
+                script{
+                            sh """
+                              #/bin/bash
+                              node jenkinsScripts/email.js ${params.Email} 
+                              
+                              """
+
                }
        
             }
