@@ -1,7 +1,5 @@
 const nodemailer = require('nodemailer');
 console.log(process.argv[2]);
-
-let hola= process.argv[3]
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -18,7 +16,7 @@ var mailOptions = {
     <div>   
         <p>Todo funciona correctamente resultados: </p>
         <ul>
-            <li>Resultado: ${{hola}}</li>
+            <li>deploy: Hola</li>
          
         </ul>
     </div>
