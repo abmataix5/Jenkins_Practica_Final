@@ -41,18 +41,14 @@ pipeline {
         stage('Update_Readme') {
              steps {
                script{
-               env.RESULT_1 = sh """
-                              #/bin/bash
-                              node jenkinsScripts/readmeUpdate.js ${test} 
-                              
-                              """
+                    sh(script: "./jenkinsCripts//Push_Changes.sh",returnStatus:true)
 
-                            sh('git config user.name abmataix5')
+                 /*            sh('git config user.name abmataix5')
                             sh('git config user.email mataix.ab@gmail.com')
                             sh('git add .')
                             sh('git commit --allow-empty -m "Acutlizar readme"')
                             sh('git push')
-
+ */
                }
        
             }
