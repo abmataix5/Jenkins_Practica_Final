@@ -51,7 +51,7 @@ pipeline {
                             sh('git config user.email mataix.ab@gmail.com')
                             sh('git add .')
                             sh('git commit --allow-empty -m "Acutlizar readme"')
-                            sh('git push')
+                            sh('git push --set-upstream origin main')
 
                }
        
