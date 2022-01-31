@@ -33,9 +33,28 @@ pipeline {
         stage('Test'){
             steps{
                 script {
-                    TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true).trim()
-                    echo "${TEST}"
+                    test = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true).trim()
+                    echo "${test}"
                 }
+            }
+        }
+        stage('Update_Readme') {
+             steps {
+               script{
+               env.RESULT_1 = sh """
+                              #/bin/bash
+                              node jenkinsScripts/readmeUpdate.js ${test} 
+                              
+                              """
+
+                            sh('git config user.name abmataix5')
+                            sh('git config user.email mataix.ab@gmail.com')
+                            sh('git add .')
+                            sh('git commit --allow-empty -m "Acutlizar readme"')
+                            sh('git push')
+
+               }
+       
             }
         }
        
