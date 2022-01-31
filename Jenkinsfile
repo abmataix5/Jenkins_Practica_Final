@@ -30,7 +30,7 @@ pipeline {
             steps{
                 script {
                     env.TEST = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true)
-                    echo "$TEST"
+                    echo "$LINT"
                 }
             }
         }
