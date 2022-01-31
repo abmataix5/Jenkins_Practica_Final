@@ -33,7 +33,7 @@ pipeline {
         stage('Test'){
             steps{
                 script {
-                    test = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true).trim()
+                    test = sh(script: "./node_modules/.bin/cypress run ",returnStatus:true)
                     echo "${test}"
                 }
             }
