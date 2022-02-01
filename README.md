@@ -37,6 +37,7 @@ Con Jenkins, las organizaciones aceleran el proceso de desarrollo y entrega de s
 <br><br>
 # STAGES
 <br>
+
 ## INIT 🚀
 
 En este primer stage instalaremos las dependencias necesarias, haremos un run build y ejecutaremos el servidor para dejarlo listo para las proximas stages. <br>
