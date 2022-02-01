@@ -62,7 +62,7 @@ pipeline {
         stage('Push_Changes') {
              steps {
 
-                  withCredentials([usernameColonPassword(credentialsId: 'jenkins_push', variable: 'TOKEN')]) {
+                  withCredentials([string(credentialsId: 'jenkins_push', variable: 'TOKEN')]) {
                     script {
                         env.PUSH = sh(script:"./jenkinsScripts/Push_Changes.sh ${TOKEN} ${Nombre} '${Motivo}' ",returnStatus:true)
                     }
