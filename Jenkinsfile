@@ -79,6 +79,7 @@ pipeline {
                         string(credentialsId: 'vercel-project-id', variable: 'VERCELPROJECTID'),
                         string(credentialsId: 'vercel-token', variable: 'VERCELTOKEN')
                     ]){
+                        sh 'sudo npm install -g npm@8.4.0 '
                         sh 'VERCEL_ORG_ID="$VERCELORGID" VERCEL_PROJECT_ID="$VERCELPROJECTID" vercel . --prod --scope abmataix5 --token="$VERCELTOKEN"'
                     }
                     
