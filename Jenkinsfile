@@ -88,7 +88,7 @@ pipeline {
 
         } */
 
-        stage('Enviar_notificacion') {
+     /*    stage('Enviar_notificacion') {
              steps {
                 script{
                             sh """
@@ -100,7 +100,7 @@ pipeline {
             
         }
        
-         } 
+         }  */
 
          stage('Custom_stage'){
              steps{
