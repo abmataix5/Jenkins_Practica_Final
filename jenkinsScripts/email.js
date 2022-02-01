@@ -4,6 +4,12 @@ var linter = process.argv[3]
 var test_cypress = process.argv[4]
 var push = process.argv[5]
 
+console.log(linter);
+
+console.log(test_cypress);
+
+console.log(push);
+
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
