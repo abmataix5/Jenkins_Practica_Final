@@ -1,6 +1,5 @@
 const fs = require('fs')
-/* const core = require('@actions/core') 
- */
+
 
 const testResult = process.argv[2]
 console.log(testResult);

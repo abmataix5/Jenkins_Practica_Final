@@ -93,7 +93,7 @@ pipeline {
                 script{
                             sh """
                               #/bin/bash
-                              node jenkinsScripts/email.js ${params.Email} ${LINT} ${test} ${PUSH}
+                              node jenkinsScripts/email.js ${params.Email} 
                               
                               """
                }
