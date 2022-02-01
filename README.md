@@ -131,7 +131,9 @@ Este stage nos enviara un email de confirmación con los resultados de la pipeli
 
 
 #### SCRIPT email.js
+
 <br>
+
 ![Captura de pantalla de 2022-02-01 16-42-29](https://user-images.githubusercontent.com/62066419/152001271-b92e492a-a51b-4cfe-aaf8-a27d2b06c0ea.png)
 
 
