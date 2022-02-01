@@ -108,13 +108,13 @@ pipeline {
  echo "${PUSH}"
   echo "${test}"
    echo "${LINT}"
-                if ( env.PUSH != '0' ||  env.test  !=  '0' ||  env.LINT  !=  '0') {
+                if ( "${PUSH}"!= '0' || "${test}"  !=  '0' ||  "${LINT}"  !=  '0') {
                     echo "Alguna stage no ha ido como deberia"
                 }
-                if ( env.PUSH  != '0' &&  env.test != '0' &&  env.LINT != '0') {
+                if ( "${PUSH}" != '0' &&  "${test}" != '0' &&  "${LINT}" != '0') {
                     echo "Esto pinta muy mal"
                 }
-                if ( env.PUSH  == '0' &&  env.test == '0' &&  env.LINT == '0') {
+                if ( "${PUSH}"  == '0' &&  "${test}" == '0' &&  "${LINT}" == '0') {
                     echo "El proyecto va viento en popa!!!"
                   
                 }
