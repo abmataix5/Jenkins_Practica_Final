@@ -135,7 +135,7 @@ Este stage nos enviara un email de confirmación con los resultados de la pipeli
 ## CUSTOM STAGE 🚀
 
 En esta custom stage realizaremos una serie de condicionales,i dependiendo de el resultado de los stages anteoriores mostaremos un mensaje por consola o otro,
-se ejecutaara en paral·lelo con la stage de notification email, queará tal que así:
+se ejecutaara en paral·lelo con la stage de notification email, quedará tal que así:
 
 <br>
 
