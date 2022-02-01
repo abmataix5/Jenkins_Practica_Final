@@ -1,5 +1,10 @@
 const nodemailer = require('nodemailer');
 
+var linter = process.argv[3]
+var test_cypress = process.argv[4]
+var push = process.argv[5]
+
+
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -16,8 +21,9 @@ var mailOptions = {
     <div>   
         <p>Todo funciona correctamente resultados: </p>
         <ul>
-            <li>deploy: Hola</li>
-         
+            <li>Resultado linter: ${{linter}} </li>
+            <li>Resultado test_cypress: ${{test_cypress}} </li>
+            <li>Resultado push: ${{push}} </li>
         </ul>
     </div>
     ` 

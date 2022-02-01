@@ -71,7 +71,7 @@ pipeline {
         }
         }
 
-        stage('Vercel'){
+       /*  stage('Vercel'){
               steps {
                 script {
                     withCredentials([
@@ -86,14 +86,14 @@ pipeline {
                 }
             }
 
-        }
+        } */
 
         stage('Enviar_notificacion') {
              steps {
                 script{
                             sh """
                               #/bin/bash
-                              node jenkinsScripts/email.js ${params.Email} 
+                              node jenkinsScripts/email.js ${params.Email} ${LINT} ${test} ${PUSH}
                               
                               """
                }
