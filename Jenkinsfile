@@ -9,15 +9,15 @@ pipeline {
         TEST    = ''
     }
       parameters {
-        text(name:'Nombre', defaultValue:'''Nombre de la persona''')
-        text(name:'Motivo', defaultValue:'''Motivo de ejecución''')
-        text(name:'Email', defaultValue:'''ejemplo@ejemplo.com''')
+        text(name:'Nombre', defaultValue:'''Nombre''')
+        text(name:'Motivo', defaultValue:'''Motivo ''')
+        text(name:'Email', defaultValue:'''mataix.ab@gmail.com''')
     }
     stages {
 
         stage('Init'){
             steps{
-                 sh "npm ci && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y"
+                sh "npm ci && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y"
                 sh 'npm run build'
                 sh 'npm start &'
             }
@@ -42,16 +42,34 @@ pipeline {
             }
         }
 
-        stage('Update_Readme') {
-             steps {
-               script{
-                    sh(script: "./jenkinsScripts/Push_Changes.sh",returnStatus:true)
 
-     
+         stage('Update_readme') {
+             steps {
+                script{
+                            sh """
+                              #/bin/bash
+                              node jenkinsScripts/readmeUpdate.js ${test} 
+                              
+                              """
                }
+            
+              }
+       
+         } 
+
+
+
+        stage('Push_Changes') {
+             steps {
+
+                  withCredentials([usernameColonPassword(credentialsId: 'jenkins_push', variable: 'TOKEN')]) {
+                    script {
+                        env.PUSH = sh(script:"./jenkinsScripts/Push_Changes.sh ${TOKEN} ${Nombre} '${Motivo}' ",returnStatus:true)
+                    }
        
             }
         }
+
 
         stage('Enviar_notificacion') {
              steps {
