@@ -88,43 +88,44 @@ pipeline {
 
         } */
 
-     /*    stage('Enviar_notificacion') {
-             steps {
-                script{
+      
+
+         stage("Parallel") {
+            steps {
+                parallel (
+                    "Notification_email" : {
+
+                           script{
                             sh """
                               #/bin/bash
                               node jenkinsScripts/email.js ${params.Email} 
                               
                               """
-               }
-            
+                          }
+                                               
+                    },
+                    "Custom stage" : {
+                       
+
+                              script{
+
+                                if ( "${PUSH}"!= '0' || "${test}"  !=  '0' ||  "${LINT}"  !=  '0') {
+                                    echo "Alguna stage no ha ido como deberia"
+                                }
+                                if ( "${PUSH}" != '0' &&  "${test}" != '0' &&  "${LINT}" != '0') {
+                                    echo "Esto pinta muy mal"
+                                }
+                                if ( "${PUSH}"  == '0' &&  "${test}" == '0' &&  "${LINT}" == '0') {
+                                    echo "El proyecto va perfecto!"
+                                
+                                }
+
+                            }
+                    }
+                )
+            }
         }
-       
-         }  */
-
-         stage('Custom_stage'){
-             steps{
-                    script{
- echo "${PUSH}"
-  echo "${test}"
-   echo "${LINT}"
-                if ( "${PUSH}"!= '0' || "${test}"  !=  '0' ||  "${LINT}"  !=  '0') {
-                    echo "Alguna stage no ha ido como deberia"
-                }
-                if ( "${PUSH}" != '0' &&  "${test}" != '0' &&  "${LINT}" != '0') {
-                    echo "Esto pinta muy mal"
-                }
-                if ( "${PUSH}"  == '0' &&  "${test}" == '0' &&  "${LINT}" == '0') {
-                    echo "El proyecto va viento en popa!!!"
-                  
-                }
-
-              }
-                
-             }
-
-         }
-  
+        
 
 }
 }
