@@ -144,7 +144,9 @@ se ejecutaara en paral·lelo con la stage de notification email, quedará tal qu
 
 <br>
 
-![Captura de pantalla de 2022-02-01 16-26-41](https://user-images.githubusercontent.com/62066419/151997920-77041c7c-87d9-4ad1-9238-e653dc6f9b85.png)
+![Captura de pantalla de 2022-02-01 17-07-14](https://user-images.githubusercontent.com/62066419/152005231-82107e33-d2cf-4283-b11c-08f86e3f9550.png)
+
+
 
 
 #### CREDENCIALES DE JENKINS UTILIZADAS
