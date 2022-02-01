@@ -73,5 +73,26 @@ En este stage ejecutamos los test de cypress instalados en el proyecto, para rea
 ![Captura de pantalla de 2022-02-01 14-20-41](https://user-images.githubusercontent.com/62066419/151976173-42d3feea-26ce-40f8-a149-87d6a2cb3a3c.png)
 
 
+## UPDATE README🚀
+
+<br>
+
+Este stage lo utilizaremso para actualizar el readme, en él ejecutaremos un script .js, que tenemos en 'jenkinsScripts', y le pasaremos la variable 'test', con el resultado de los test de cypress, dependiendo si han salido bien o con errores, cambiará la imagen del test de cypress.
+
+![Captura de pantalla de 2022-02-01 14-25-24](https://user-images.githubusercontent.com/62066419/151976680-d6e7cd93-26d2-4aff-b4d6-29589d2e2c27.png)
+
+
+## PUSH CHANGES🚀
+
+<br>
+
+Este stage lo utilizaremso para actualizar el readme, en él ejecutaremos un script .js, que tenemos en 'jenkinsScripts', y le pasaremos la variable 'test', con el resultado de los test de cypress, dependiendo si han salido bien o con errores, cambiará la imagen del test de cypress.
+
+![Captura de pantalla de 2022-02-01 14-25-24](https://user-images.githubusercontent.com/62066419/151976680-d6e7cd93-26d2-4aff-b4d6-29589d2e2c27.png)
+
+
+
+
+
 
 
