@@ -154,4 +154,14 @@ se ejecutaara en paral·lelo con la stage de notification email, quedará tal qu
 ![Captura de pantalla de 2022-02-01 17-05-16](https://user-images.githubusercontent.com/62066419/152004897-fc09f97f-a115-4560-a20a-31544ea5c47c.png)
 
 
+### PLUGIN DASHBOARD VIEW
+
+-Instalamos el plugin de Dashboard View Para Jenkins :<br>
+![Captura de pantalla de 2022-02-01 17-15-56](https://user-images.githubusercontent.com/62066419/152006970-115d5a67-38ee-43a0-aa74-a896f891dd74.png)
+
+
+-Creamos una nueva vista dashboard y listo :<br>
+
+![Captura de pantalla de 2022-02-01 17-16-11](https://user-images.githubusercontent.com/62066419/152007126-a7b45b30-d63b-4c5c-9ea3-72082435fb40.png)
+
 
