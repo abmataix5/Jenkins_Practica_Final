@@ -1,9 +1,4 @@
-Example of nextjs project using Cypress.io
 
-<!---Start place for the badge -->
-[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
-
-<!---End place for the badge -->
 
 
 
@@ -80,6 +75,13 @@ En este stage ejecutamos los test de cypress instalados en el proyecto, para rea
 Este stage lo utilizaremos para actualizar el readme, en él ejecutaremos un script .js, que tenemos en 'jenkinsScripts', y le pasaremos la variable 'test', con el resultado de los test de cypress, dependiendo si han salido bien o con errores, cambiará la imagen del test de cypress.
 
 ![Captura de pantalla de 2022-02-01 14-25-24](https://user-images.githubusercontent.com/62066419/151976680-d6e7cd93-26d2-4aff-b4d6-29589d2e2c27.png)
+
+Example of nextjs project using Cypress.io
+
+<!---Start place for the badge -->
+[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
+
+<!---End place for the badge -->
 
 
 <br>
