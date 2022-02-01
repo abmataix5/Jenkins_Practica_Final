@@ -69,7 +69,7 @@ pipeline {
        
             }
         }
-
+        }
 
         stage('Enviar_notificacion') {
              steps {
@@ -85,6 +85,7 @@ pipeline {
        
          } 
   
+
 }
 }
 
