@@ -132,3 +132,8 @@ Este stage nos enviara un email de confirmación con los resultados de la pipeli
 
 ![Captura de pantalla de 2022-02-01 14-34-45](https://user-images.githubusercontent.com/62066419/151977985-2e431dc3-f662-4212-973a-a880ca7ef4cf.png)
 
+## CUSTOM STAGE 🚀
+
+En esta custom stage realizaremos una serie de condicionales,i dependiendo de el resultado de los stages anteoriores mostaremos un mensaje por consola o otro:
+
+
