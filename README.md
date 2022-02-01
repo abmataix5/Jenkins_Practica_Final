@@ -90,6 +90,12 @@ Este stage lo utilizaremso para actualizar el readme, en él ejecutaremos un scr
 
 ![Captura de pantalla de 2022-02-01 14-25-24](https://user-images.githubusercontent.com/62066419/151976680-d6e7cd93-26d2-4aff-b4d6-29589d2e2c27.png)
 
+<br>
+
+#### SCRIPT readmeUpdate.js
+
+
+![Captura de pantalla de 2022-02-01 14-28-44](https://user-images.githubusercontent.com/62066419/151977157-66f517d4-27d6-43ac-acb7-3a6923332be0.png)
 
 
 
