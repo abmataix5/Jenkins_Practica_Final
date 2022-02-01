@@ -5,7 +5,7 @@ var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user:  process.argv[2],
-        pass:  'ttbjxwxkwlqmkydg'
+        pass:  process.argv[3]
     }
 });
 
@@ -17,7 +17,10 @@ var mailOptions = {
     <div>   
         <p>Todo funciona correctamente resultados: </p>
         <ul>
-         
+         <li>Resultado Linter</li>
+         <li>Resultado Cypress</li>
+         <li>Resultado Push</li>
+
         </ul>
     </div>
     ` 

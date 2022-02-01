@@ -67,7 +67,7 @@ pipeline {
                         env.PUSH = sh(script:"./jenkinsScripts/Push_Changes.sh ${TOKEN} ${Nombre} '${Motivo}' ",returnStatus:true)
                     }
        
-            }
+                 }
         }
         }
 
@@ -91,22 +91,26 @@ pipeline {
       
 
          stage("Parallel") {
+
             steps {
                 parallel (
                     "Notification_email" : {
 
-                           script{
-                            sh """
-                              #/bin/bash
-                              node jenkinsScripts/email.js ${params.Email} 
-                              
-                              """
+
+                           withCredentials([string(credentialsId: 'password_google', variable: 'GOOGLE')]) {
+                                script {
+                                    sh """
+                                        #/bin/bash
+                                        node jenkinsScripts/email.js ${params.Email} ${GOOGLE} ${LINT} ${test} ${PUSH}
+                                        
+                                        """
+                                }
+       
                           }
-                                               
+                                       
                     },
                     "Custom stage" : {
                        
-
                               script{
 
                                 if ( "${PUSH}"!= '0' || "${test}"  !=  '0' ||  "${LINT}"  !=  '0') {
