@@ -1,6 +1,22 @@
 const nodemailer = require('nodemailer');
 
 
+if(process.argv[4]){ var lint_result = 'SUCCESS'   
+}else{
+    var lint_result = 'FAILURE'
+}
+
+if(process.argv[5]){ var cypress_result = 'SUCCESS'
+}else{
+    var cypress_result = 'FAILURE'
+}
+
+if(process.argv[6]){ var push_result = 'SUCCESS'
+}else{
+    var push_result = 'FAILURE'
+}
+
+
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -17,9 +33,9 @@ var mailOptions = {
     <div>   
         <p>Todo funciona correctamente resultados: </p>
         <ul>
-         <li>Resultado Linter</li>
-         <li>Resultado Cypress</li>
-         <li>Resultado Push</li>
+         <li>Resultado Linter : ${{lint_result}}</li>
+         <li>Resultado Cypress : ${{cypress_result}}</li>
+         <li>Resultado Push : ${{push_result}}</li>
 
         </ul>
     </div>
