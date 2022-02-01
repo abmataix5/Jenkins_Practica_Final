@@ -111,3 +111,22 @@ Stage para realizar los cambios en el repositorio remoto, ejecutara el script 'P
 ![Captura de pantalla de 2022-02-01 14-34-45](https://user-images.githubusercontent.com/62066419/151977985-2e431dc3-f662-4212-973a-a880ca7ef4cf.png)
 
 
+
+## ENVIAR EMAIL 🚀
+
+<br>
+
+Este stage nos enviara un email de confirmación con los resultados de la pipeline, para ello hemos seguido unos pasos: <br>
+
+- Contraseña aplicaciones en google : Para poder enviar emails es necesario crear una contraseña de aplicaciones como en la actividd de GHub Actions<br>
+- Parametro nombre : nombre de quin esta ejecutando la pipeline<br>
+- Parametro motivo : Motivo de la ejecución de la pipeline  
+
+
+
+![Captura de pantalla de 2022-02-01 14-33-43](https://user-images.githubusercontent.com/62066419/151977857-3d15abcb-31ed-409b-b845-6d39cd9a16a5.png)
+
+#### SCRIPT email.js
+
+![Captura de pantalla de 2022-02-01 14-34-45](https://user-images.githubusercontent.com/62066419/151977985-2e431dc3-f662-4212-973a-a880ca7ef4cf.png)
+
