@@ -105,7 +105,9 @@ pipeline {
          stage('Custom_stage'){
              steps{
                     script{
-
+ echo "${PUSH}"
+  echo "${test}"
+   echo "${LINT}"
                 if ( env.PUSH != '0' ||  env.test  !=  '0' ||  env.LINT  !=  '0') {
                     echo "Alguna stage no ha ido como deberia"
                 }
