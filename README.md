@@ -77,18 +77,10 @@ En este stage ejecutamos los test de cypress instalados en el proyecto, para rea
 
 <br>
 
-Este stage lo utilizaremso para actualizar el readme, en él ejecutaremos un script .js, que tenemos en 'jenkinsScripts', y le pasaremos la variable 'test', con el resultado de los test de cypress, dependiendo si han salido bien o con errores, cambiará la imagen del test de cypress.
+Este stage lo utilizaremos para actualizar el readme, en él ejecutaremos un script .js, que tenemos en 'jenkinsScripts', y le pasaremos la variable 'test', con el resultado de los test de cypress, dependiendo si han salido bien o con errores, cambiará la imagen del test de cypress.
 
 ![Captura de pantalla de 2022-02-01 14-25-24](https://user-images.githubusercontent.com/62066419/151976680-d6e7cd93-26d2-4aff-b4d6-29589d2e2c27.png)
 
-
-## PUSH CHANGES🚀
-
-<br>
-
-Este stage lo utilizaremso para actualizar el readme, en él ejecutaremos un script .js, que tenemos en 'jenkinsScripts', y le pasaremos la variable 'test', con el resultado de los test de cypress, dependiendo si han salido bien o con errores, cambiará la imagen del test de cypress.
-
-![Captura de pantalla de 2022-02-01 14-25-24](https://user-images.githubusercontent.com/62066419/151976680-d6e7cd93-26d2-4aff-b4d6-29589d2e2c27.png)
 
 <br>
 
@@ -100,5 +92,22 @@ Este stage lo utilizaremso para actualizar el readme, en él ejecutaremos un scr
 
 
 
+## PUSH CHANGES🚀
+
+<br>
+
+Stage para realizar los cambios en el repositorio remoto, ejecutara el script 'Push_Changes.sh', le pasaremos las variables : <br>
+
+- TOKEN : Token de acceso de GHub que habremos guardado previamente en las credenciales de Jenkins.<br>
+- Parametro nombre : nombre de quin esta ejecutando la pipeline<br>
+- Parametro motivo : Motivo de la ejecución de la pipeline  
+
+
+
+![Captura de pantalla de 2022-02-01 14-33-43](https://user-images.githubusercontent.com/62066419/151977857-3d15abcb-31ed-409b-b845-6d39cd9a16a5.png)
+
+#### SCRIPT Push_Changes.sh
+
+![Captura de pantalla de 2022-02-01 14-34-45](https://user-images.githubusercontent.com/62066419/151977985-2e431dc3-f662-4212-973a-a880ca7ef4cf.png)
 
 
