@@ -1,14 +1,11 @@
 const nodemailer = require('nodemailer');
 
-var linter = process.argv[3]
-var test_cypress = process.argv[4]
-var push = process.argv[5]
 
-console.log(linter);
+console.log(process.argv[3]);
 
-console.log(test_cypress);
+console.log(process.argv[4]);
 
-console.log(push);
+console.log(process.argv[5]);
 
 
 var transporter = nodemailer.createTransport({
@@ -27,9 +24,7 @@ var mailOptions = {
     <div>   
         <p>Todo funciona correctamente resultados: </p>
         <ul>
-            <li>Resultado linter: ${{linter}} </li>
-            <li>Resultado test_cypress: ${{test_cypress}} </li>
-            <li>Resultado push: ${{push}} </li>
+         
         </ul>
     </div>
     ` 
