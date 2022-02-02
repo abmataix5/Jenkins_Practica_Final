@@ -48,6 +48,7 @@ En este stage instalo una serie de dependencias necesarias para el stage de Cypr
 ## LINTER🚀
 
 <br>
+
 En este stage ejecutaremos el linter del proyecto, en la primera ejecución nos saldrán una serie de errores en los archivos .js, los cuales hemos solucionado, guardaremos el resultado del test en una variable llamada LINT, para poder utilizarla luego.
 
 
@@ -140,6 +141,7 @@ Este stage nos enviara un email de confirmación con los resultados de la pipeli
 #### RESULTADO EMAIL
 
 <br>
+
 ![Captura de pantalla de 2022-02-02 11-54-01](https://user-images.githubusercontent.com/62066419/152141124-5e38f6cb-afe5-4285-a6d8-6b68781eac6c.png)
 
 
