@@ -137,6 +137,14 @@ Este stage nos enviara un email de confirmación con los resultados de la pipeli
 ![Captura de pantalla de 2022-02-01 16-42-29](https://user-images.githubusercontent.com/62066419/152001271-b92e492a-a51b-4cfe-aaf8-a27d2b06c0ea.png)
 
 
+#### RESULTADO EMAIL
+
+<br>
+![Captura de pantalla de 2022-02-02 11-54-01](https://user-images.githubusercontent.com/62066419/152141124-5e38f6cb-afe5-4285-a6d8-6b68781eac6c.png)
+
+
+
+
 ## CUSTOM STAGE 🚀
 
 En esta custom stage realizaremos una serie de condicionales,i dependiendo de el resultado de los stages anteoriores mostaremos un mensaje por consola o otro,
@@ -164,4 +172,12 @@ se ejecutaara en paral·lelo con la stage de notification email, quedará tal qu
 
 ![Captura de pantalla de 2022-02-01 17-16-11](https://user-images.githubusercontent.com/62066419/152007126-a7b45b30-d63b-4c5c-9ea3-72082435fb40.png)
 
+
+<br>
+
+## RESULTADO FINAL
+
+<br>
+
+![Captura de pantalla de 2022-02-02 11-54-44](https://user-images.githubusercontent.com/62066419/152141188-586c5f72-ba39-43d2-be86-c72d8524b2ad.png)
 
