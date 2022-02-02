@@ -1,17 +1,17 @@
 const nodemailer = require('nodemailer');
 
 
-if(process.argv[4]){ var lint_result = 'SUCCESS'   
+if(process.argv[4] == '0'){ var lint_result = 'SUCCESS'   
 }else{
     var lint_result = 'FAILURE'
 }
 
-if(process.argv[5]){ var cypress_result = 'SUCCESS'
+if(process.argv[5] == '0'){ var cypress_result = 'SUCCESS'
 }else{
     var cypress_result = 'FAILURE'
 }
 
-if(process.argv[6]){ var push_result = 'SUCCESS'
+if(process.argv[6] == '0'){ var push_result = 'SUCCESS'
 }else{
     var push_result = 'FAILURE'
 }
