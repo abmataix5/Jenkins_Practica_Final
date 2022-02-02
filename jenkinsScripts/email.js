@@ -33,9 +33,9 @@ var mailOptions = {
     <div>   
         <p>Todo funciona correctamente resultados: </p>
         <ul>
-         <li>Resultado Linter : ${{lint_result}}</li>
-         <li>Resultado Cypress : ${{cypress_result}}</li>
-         <li>Resultado Push : ${{push_result}}</li>
+         <li>Resultado Linter : ${lint_result}</li>
+         <li>Resultado Cypress : ${cypress_result}</li>
+         <li>Resultado Push : ${push_result}</li>
 
         </ul>
     </div>
